@@ -32,6 +32,7 @@
       return (
         <div ref="wrapper" class={this.wrapperClass}>
           <HiddenFields />
+          {/* 主体 */}
           <Control ref="control" />
           {this.appendToBody ? <MenuPortal ref="portal" /> : <Menu ref="menu" />}
         </div>

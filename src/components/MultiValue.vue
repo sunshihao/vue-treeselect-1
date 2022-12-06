@@ -45,6 +45,7 @@
 
       return renderValueContainer(
         <transition-group class="vue-treeselect__multi-value" {...transitionGroupProps}>
+          {/* 复数主体 */}
           {this.renderMultiValueItems()}
           {this.renderExceedLimitTip()}
           <Placeholder key="placeholder" />

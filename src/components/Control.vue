@@ -144,7 +144,9 @@
       return (
         <div class="vue-treeselect__control" onMousedown={instance.handleMouseDown}>
           <ValueContainer ref="value-container" />
+          {/* 全部删除 */}
           {this.renderX()}
+          {/* 下拉 */}
           {this.renderArrow()}
         </div>
       )

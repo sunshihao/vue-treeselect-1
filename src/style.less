@@ -21,7 +21,7 @@
 @treeselect-transition-duration-slow: 400ms;
 @treeselect-max-level: 8;
 
-@treeselect-control-height: 36px;
+@treeselect-control-height: 32px;
 @treeselect-control-inner-height: @treeselect-control-height - @treeselect-control-border-width * 2;
 @treeselect-control-border-width: 1px;
 @treeselect-control-border-color: #ddd;
@@ -273,8 +273,8 @@
 .vue-treeselect__multi-value-item--transition {
   &-enter-active,
   &-leave-active {
-    transition-duration: @treeselect-transition-duration;
-    transition-property: transform, opacity;
+    // transition-duration: @treeselect-transition-duration;
+    // transition-property: transform, opacity;
   }
 
   &-enter-active {
@@ -294,7 +294,7 @@
   }
 
   &-move {
-    transition: @treeselect-transition-duration transform @ease-out-quart;
+    // transition: @treeselect-transition-duration transform @ease-out-quart;
   }
 }
 
@@ -357,9 +357,10 @@
   border: @treeselect-control-border-width solid @treeselect-control-border-color;
   border-radius: @treeselect-control-border-radius;
   background: @treeselect-control-bg;
-  transition-duration: @treeselect-transition-duration;
-  transition-property: border-color, box-shadow, width, height, background-color, opacity;
-  transition-timing-function: @ease-out-cubic;
+  // TODO 202212105 暂时屏蔽
+  // transition-duration: @treeselect-transition-duration;
+  // transition-property: border-color, box-shadow, width, height, background-color, opacity;
+  // transition-timing-function: @ease-out-cubic;
 
   .vue-treeselect:not(.vue-treeselect--disabled):not(.vue-treeselect--focused) &:hover {
     border-color: @treeselect-control-border-color-hover;
@@ -463,8 +464,8 @@
   display: inline-table;
   background: @treeselect-multi-value-item-bg;
   // Table elements do not have margin, so we set at the container element.
-  padding: @treeselect-multi-value-margin-y @treeselect-multi-value-margin-x;
-  border: @treeselect-multi-value-item-border-width solid @treeselect-multi-value-item-border-color;
+  // padding: @treeselect-multi-value-margin-y @treeselect-multi-value-margin-x;
+  // border: @treeselect-multi-value-item-border-width solid @treeselect-multi-value-item-border-color;
   border-radius: @treeselect-border-radius-sm;
   color: @treeselect-multi-value-font-color;
   font-size: @treeselect-multi-value-font-size;
@@ -505,6 +506,7 @@
   display: table-cell;
   padding: @treeselect-multi-value-padding-y @treeselect-multi-value-padding-x;
   vertical-align: middle;
+  line-height: 24px;
 }
 
 .vue-treeselect__value-remove {
@@ -651,7 +653,7 @@
   .clickable();
 
   color: @treeselect-x-color;
-  animation: @treeselect-transition-duration vue-treeselect-animation-fade-in @ease-out-circ;
+  // animation: @treeselect-transition-duration vue-treeselect-animation-fade-in @ease-out-circ;
 
   &:hover {
     color: @treeselect-x-color-hover;
@@ -809,7 +811,7 @@
   height: @treeselect-arrow-size;
   color: @treeselect-arrow-color;
   vertical-align: middle;
-  transition: @treeselect-transition-duration transform @treeselect-arrow-transition-timing-function;
+  // transition: @treeselect-transition-duration transform @treeselect-arrow-transition-timing-function;
   transform: rotateZ(-90deg);
 
   [dir="rtl"] & {
@@ -872,7 +874,7 @@
   border-style: solid;
   border-radius: @treeselect-border-radius-sm;
   position: relative;
-  transition: @treeselect-transition-duration all @ease-out-circ;
+  // transition: @treeselect-transition-duration all @ease-out-circ;
 }
 
 .vue-treeselect__check-mark,
@@ -883,7 +885,7 @@
   top: 1px;
   background-repeat: no-repeat;
   opacity: 0;
-  transition: @treeselect-transition-duration all ease;
+  // transition: @treeselect-transition-duration all ease;
 }
 
 .vue-treeselect__minus-mark {
